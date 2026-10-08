@@ -16,7 +16,7 @@ const HeroSection = () => {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (rollNo.trim()) {
-      navigate(`/results?roll=${rollNo}`);
+      navigate(`/results?roll=${encodeURIComponent(rollNo.trim())}`);
     }
   };
 
